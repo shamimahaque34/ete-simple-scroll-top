@@ -14,4 +14,33 @@
  * Text Domain:       esst
  */
 
+ // Including CSS
+ function esst_enqueue_style()
+ {
+    wp_enqueue_style('esst-style',plugins_url('css/esst-style.css',__FILE__));
+ }
+ add_action( "wp_enqueue_scripts","esst_enqueue_style" );
+
+
+ // Including Javascript
+ function esst_enqueue_scripts()
+ {  
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('esst-plugin',plugins_url('js/esst-plugin.js',__FILE__),array(),'1.0.0',true);
+ }
+ add_action( "wp_enqueue_scripts","esst_enqueue_scripts" );
+
+ //jQuery Plugin Settings Activation
+
+ function esst_scroll_script(){
+    ?> 
+    <script>
+    jQuery(document).ready(function(){
+        jQuery.scrollUp();
+    });
+    </script>
+<?php }
+
+add_action( "wp_footer","esst_scroll_script" );
+ 
 ?>
