@@ -1,12 +1,12 @@
 /* Image style */
 #scrollUp {
-    background-image: url("../image/top.png");
-    background-size: cover;
+    background-image: url("../image/arrow.png");
+    /* background-size: cover; */
     background-color: black;
-    bottom: 20px;
-    right:  20px;
-    width:  20px;    /* Width of image */
-    height: 20px;   /* Height of image */
+    bottom: 5px;
+    right:  5px;
+    width:  5px;    /* Width of image */
+    height: 5px;   /* Height of image */
     text-indent: -9999px;
     display: block;
 }
